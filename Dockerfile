@@ -1,9 +1,9 @@
-FROM nikolaik/python-nodejs:python3.9-nodejs18
-RUN apt-get update -y && apt-get upgrade -y \
-    && apt-get install -y --no-install-recommends ffmpeg \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
-COPY . /app/
-WORKDIR /app/
-RUN pip3 install --no-cache-dir --upgrade --requirement requirements.txt
-CMD bash start
+FROM python:3.9.10
+
+WORKDIR /YukkiaMusic
+COPY . /YukkiMusic
+ 
+RUN pip install -r requirements.txt
+ 
+ENTRYPOINT ["python"]
+CMD ["-m", "YukkiMusic"]
