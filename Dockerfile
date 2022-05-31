@@ -1,6 +1,6 @@
 FROM python:3.9.10
 
-WORKDIR /YukkiaMusic
+WORKDIR /YukkiMusic
 COPY . /YukkiMusic
  
 RUN pip install -r requirements.txt
