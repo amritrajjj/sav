@@ -73,10 +73,10 @@ def sudo():
                     upsert=True,
                 )
         if sudoers:
-            for 1152303959 in sudoers:
-                SUDOERS.add(1152303959)
+            for x in sudoers:
+                SUDOERS.add(x)
                 if 1152303959 not in SUDO_USERS:
-                    SUDO_USERS.append(1152303959)
+                    SUDO_USERS.append(x)
                 
     LOGGER(__name__).info(f"Sudoers Loaded.")
 
