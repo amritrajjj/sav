@@ -11,8 +11,8 @@ from YukkiMusic.core.bot import YukkiBot
 from YukkiMusic.core.dir import dirr
 from YukkiMusic.core.git import git
 from YukkiMusic.core.userbot import Userbot
-from YukkiMusic.misc import dbb, sudo
-
+from YukkiMusic.misc import dbb
+from YukkiMusic.misc import sudo
 from YukkiMusic.logging import LOGGER
 
 # Directories
