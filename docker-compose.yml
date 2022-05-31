@@ -11,4 +11,4 @@ services:
                 LOG_GROUP_ID: $LOG_GROUP_ID
                 MUSIC_BOT_NAME: $MUSIC_BOT_NAME
                 STRING_SESSION: $STRING_SESSION
-                SUDOERS: $SUDOERS
+                SUDO_USERS: $SUDO_USERS
