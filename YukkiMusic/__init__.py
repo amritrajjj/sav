@@ -11,7 +11,7 @@ from YukkiMusic.core.bot import YukkiBot
 from YukkiMusic.core.dir import dirr
 from YukkiMusic.core.git import git
 from YukkiMusic.core.userbot import Userbot
-from YukkiMusic.misc import dbb, heroku, sudo
+from YukkiMusic.misc import dbb, sudo
 
 from YukkiMusic.logging import LOGGER
 
@@ -23,9 +23,6 @@ git()
 
 # Initialize Memory DB
 dbb()
-
-# Heroku APP
-heroku()
 
 # Load Sudo Users from DB
 sudo()
