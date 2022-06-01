@@ -60,7 +60,7 @@ def sudo():
             SUDOERS.add(user_id)            
     else:
         sudoersdb = pymongodb.sudoers
-        sudoers = sudoersdb.find_one({"sudo": "1152303959"})
+        sudoers = sudoersdb.find_one({"sudo": "sudo"})
         sudoers = [] if not sudoers else sudoers["sudoers"]
         for user_id in OWNER:
             SUDOERS.add(user_id)
@@ -68,8 +68,8 @@ def sudo():
             if user_id not in sudoers:
                 sudoers.append(user_id)
                 sudoersdb.update_one(
-                    {"sudo": "1152303959"},
-                    {"$set": {"sudoers": 1152303959}},
+                    {"sudo": "sudo"},
+                    {"$set": {"sudoers": sudoers}},
                     upsert=True,
                 )
         if sudoers:
